@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class = "jumbotron-fluid">
+    <div class = "row">
+      <div class = "col-sm-7">
+          <img src="http://timcalkins.com/wp-content/uploads/2018/04/Books-Photo-1.jpg" alt="book_img" class="img-responsive">
+      </div>
+      <div class="col-sm-5">
+        <div class="card">
+            <div class="row" style = "padding: 10px 25px">
+             <div class = "row">
+               <h1 style="text-align: center">Login Here</h1>
+             </div>
+             <div class = "row">
+              <div class = "col-sm-6">
+                <button type="button" class="btn btn-block" style = "background-color: #3b5998; color: white">
+                    <i class='fab fa-facebook-square' style = "padding-right: 10px"></i>Facebook</button>
+              </div>
+              <div class = "col-sm-6">
+                  <button type="button" class="btn btn-block" id="google"><i class="fab fa-google" style="color: rgb(30, 108, 214)"></i> Google</button>
+              </div>
+             </div>
+              <br>
+              <form [formGroup] = "login" class = "box">
+                <div class="form-group">
+                  <!-- <label for="username"><i class="fas fa-user" ></i> &nbsp;Email address/ Phone Number:</label> -->
+                  <input type="text" class="form-control" formControlName = "username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Email/Phone Number" #username>
+                  <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required" style="color:red">**Phone number/Email is required**</div>
+                  </div>  
+                </div>
+                <div class="form-group">
+                  <!-- <label for="pwd">Password:</label> -->
+                  <input type="password" class="form-control" formControlName = "password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password" #pwd>
+                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf="f.password.errors.required" style="color:red">**Password is required**</div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-primary" id = "login"  (click) = "check(username.value,pwd.value)" value="Login">
+                <br>
+              </form>
+              
+              
+            </div>
+
+            <div style="background-color: gray; width: 100%; height:40px; text-align: center">
+              <label style="font-family: sans-serif; font-size: 25px;">Dont have a account?</label>
+              &nbsp;
+              <a routerLink="/signup"style="font-family: sans-serif; font-size: 25px; color:white">Sign up</a>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
