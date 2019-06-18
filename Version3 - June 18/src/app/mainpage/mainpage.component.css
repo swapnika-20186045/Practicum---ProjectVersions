@@ -1,0 +1,52 @@
+/* #Hero {
+    padding-top: 40px;
+}
+#hello{
+    background-image: url(https://cdn.slidemodel.com/wp-content/uploads/13081-01-gradient-designs-powerpoint-backgrounds-16x9-4-870x489.jpg);    
+}
+.container-fluid{
+    background-image: url(https://cdn.slidemodel.com/wp-content/uploads/13081-01-gradient-designs-powerpoint-backgrounds-16x9-4-870x489.jpg);
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#Hero {
+    background-color: #fff;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding: 70px 0 40px;
+}
+#Carousel {
+    background: url(/img/landing/carousel-bg.svg) center bottom no-repeat;
+    background-size: 100%;
+    background-color: #fff;
+    padding: 76px 0 87px;
+}
+#Carousel {
+    padding: 42px 0 21px;
+} */
+
+
+/* #navBarSearchForm input[type=text]{width:100px !important;} */
+
+.bg {
+    /* The image used */
+    background-image: url("https://thewallpaper.co//wp-content/uploads/2016/10/desktop-book-hd-backgrounds-hd-wallpapers-background-photos-windows-apple-artworks-high-definition-download-pictures-1920x1080.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-repeat: round;
+    position: absolute;
+    width: 100%;
+    background-size: auto;
+}
+h1 {
+  color: rgb(138, 38, 38);
+  font-family: 'Comic Sans MS';
+  font-size: 6vw;
+  text-align: left;
+  padding-top: 15%;
+  transform: rotate(-3deg);
+}
