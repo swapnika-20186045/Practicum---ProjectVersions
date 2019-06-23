@@ -1,0 +1,45 @@
+<div class = "container-fluid" style = "background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%); width: 100%; min-height: 100vh">
+  <div class="card" style = "padding-top: 2%; width:480px; margin-top: 5%; background: white;padding-left: 2%;padding-right: 2%"> 
+      <div class="card-header">
+          <span style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 35px">Log in</span>
+      </div>
+      <br>
+      <div class="card-body">
+        <div class = "col-md-6">
+            <button type="button" class="btn btn-block" style = "background-color: #3b5998; color: white">
+                <i class='fab fa-facebook-square' style = "padding-right: 10px"></i>Facebook</button>
+        </div>
+        <div class = "col-md-6">
+            <button type="button" class="btn btn-block" id="google"><i class="fab fa-google" style="color: rgb(30, 108, 214)"></i> Google</button>
+            <br>
+        <br>
+        </div>
+        
+          <form [formGroup] = "login" class = "box">
+            <div class="form-group">
+              <label><i class="fas fa-user" style='font-size:24px;color: gray'></i> </label>
+              <input type="text" style="width: 85%" class="form-control" formControlName = "username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder="Email/Phone Number" #username>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required" style="color: red; text-align: center; font-family: cursive">**Phone number/Email is required**</div>
+              </div>  
+            </div>
+            <div class="form-group">
+              <label for="pwd"><i class="fa fa-lock" style="font-size:28px;color: gray"></i></label>
+              <input type="password" style="width: 85%"  class="form-control" formControlName = "password"  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password" #pwd>
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required" style="color: red; text-align: center; font-family: cursive">**Password is required**</div>
+                </div>
+            </div>
+            <br>
+            <div class="card-footer">
+                <input type="submit" class="btn btn-primary" id = "block"  (click) = "check(username.value,pwd.value)" value="LOGIN">
+                <br>
+                <br>
+                    <a href="/signup" style="color: blue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 18px;text-decoration: none">Register Now !</a>
+                    <a href="/forgot" style="color: blue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 18px; float: right;text-decoration: none">Forgot password ?</a>
+            </div>
+          </form>
+      </div> 
+  </div>
+</div>
+

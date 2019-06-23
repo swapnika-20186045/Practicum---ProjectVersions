@@ -1,0 +1,17 @@
+.bg {
+    /* The image used */
+    background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+    /* filter: opacity(0.5); */
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-repeat: round;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    mix-blend-mode: light;
+}
