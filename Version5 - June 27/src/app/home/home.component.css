@@ -1,0 +1,41 @@
+.cardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+/* Column Gap */
+.cardList > * {
+box-sizing: border-box;
+}
+.cardList > *:not(:last-child) {
+margin-right: 32px;
+}
+/* Item sizing */
+.cardListItem {
+flex: 0 1 calc(33.3% - 32px);
+}
+
+.title {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    /* font-size: 0px; */
+    color: whitesmoke;
+}
+
+.bg {
+    /* The image used */
+    background: linear-gradient(to bottom, #0187c2 0%, #042d41 100%);
+    /* filter: opacity(0.5); */
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-repeat: round;
+    padding: 0;
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    mix-blend-mode: light;
+}

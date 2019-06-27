@@ -1,0 +1,92 @@
+<div class="bg">
+  <div class="page">
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+  <nav aria-label="Page navigation example">
+      <span *ngFor = "let books of text0">
+        <!-- <p>{{text0.length}}</p> -->
+        <h3 class="title">Because you clicked - {{books.recommendedFor}}</h3>
+        <ul class="pagination justify-content-center" *ngIf = byGenre>
+          <li class="page-item">
+            <a class="page-link" tabindex="-1"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          </li>
+          <li class="page-item" *ngFor = "let book of books.recommendations"><a class="page-link"><img src = "{{book.image_url}}">
+          </a></li>
+          <li class="page-item">
+            <a class="page-link"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </li>
+        </ul>
+        <br>
+        <br>
+      </span>
+      <h3 class="title">Books related to "{{genre1}}"</h3>
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" tabindex="-1"><span class="glyphicon glyphicon-chevron-left"(click)="leftDec(1)"></span></a>
+        </li>
+        <li class="page-item" *ngFor = "let book of text1"><a class="page-link"><img src = "{{book.image_url}}" (click)="image(book)" class="img-responsive" width="auto" height="auto">
+        </a></li>
+        <li class="page-item">
+          <a class="page-link"><span class="glyphicon glyphicon-chevron-right"(click)="rightInc(1)"></span></a>
+        </li>
+      </ul>
+
+      <br>
+      
+      <h3 class="title">Books related to "{{genre2}}"</h3>
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" tabindex="-1"><span class="glyphicon glyphicon-chevron-left"(click)="leftDec(2)"></span></a>
+        </li>
+        <li class="page-item" *ngFor = "let book of text2"><a class="page-link"><img src = "{{book.image_url}}" (click)="image(book)">
+        </a></li>
+        <li class="page-item">
+          <a class="page-link"><span class="glyphicon glyphicon-chevron-right"(click)="rightInc(2)"></span></a>
+        </li>
+      </ul>
+
+      <br>
+      
+      <h3 class="title">Books related to "{{genre3}}"</h3>
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" tabindex="-1"><span class="glyphicon glyphicon-chevron-left"(click)="leftDec(3)"></span></a>
+        </li>
+        <li class="page-item" *ngFor = "let book of text3"><a class="page-link"><img src = "{{book.image_url}}" (click)="image(book)">
+        </a></li>
+        <li class="page-item">
+          <a class="page-link"><span class="glyphicon glyphicon-chevron-right"(click)="rightInc(3)"></span></a>
+        </li>
+      </ul>
+
+      <br>
+      
+      <h3 class="title">Books related to "{{genre4}}"</h3>
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" tabindex="-1"><span class="glyphicon glyphicon-chevron-left"(click)="leftDec(4)"></span></a>
+        </li>
+        <li class="page-item" *ngFor = "let book of text4"><a class="page-link"><img src = "{{book.image_url}}" (click)="image(book)">
+        </a></li>
+        <li class="page-item">
+          <a class="page-link"><span class="glyphicon glyphicon-chevron-right" (click)="rightInc(4)"></span></a>
+        </li>
+      </ul>
+
+      <br>
+      
+      <h3 class="title">Books related to "{{genre5}}"</h3>
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" tabindex="-1"><span class="glyphicon glyphicon-chevron-left"(click)="leftDec(5)"></span></a>
+        </li>
+        <li class="page-item" *ngFor = "let book of text5"><a class="page-link"><img src = "{{book.image_url}}" (click)="image(book)">
+        </a></li>
+        <li class="page-item">
+          <a class="page-link"><span class="glyphicon glyphicon-chevron-right"(click)="rightInc(5)"></span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</div>

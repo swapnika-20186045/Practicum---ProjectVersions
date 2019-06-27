@@ -1,0 +1,16 @@
+<div class="bg">
+  <div class="page">
+  <app-navbar></app-navbar>
+  <div class="row">
+    <div class="col-sm-1"><br></div>
+    <div class="col-sm-10">
+      <div class="grid-container">
+          <div *ngFor = "let listItem of list">
+            <img src="{{listItem.image_url}}" class="responsive">
+            <h4 style="color: whitesmoke">{{listItem.title}}</h4>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-1"><br></div>
+  </div>
+</div>
